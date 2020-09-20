@@ -7,9 +7,9 @@ from selenium.common.exceptions import NoSuchElementException, NoAlertPresentExc
 
 # 模拟浏览器打开网站
 chrome_options = Options()
-chrome_options.add_argument('--headless')
-chrome_options.add_argument('--no-sandbox')
-chrome_options.add_argument('--disable-dev-shm-usage')
+# chrome_options.add_argument('--headless')
+# chrome_options.add_argument('--no-sandbox')
+# chrome_options.add_argument('--disable-dev-shm-usage')
 browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
 
 def xmu():
@@ -22,7 +22,7 @@ def xmu():
         browser.find_element_by_xpath(
             "//*[@id='password']").send_keys("os.environ['XMU_PASSWORD']")
         browser.find_element_by_xpath("//*[@type='submit']").click()
-        time.sleep(10)
+        time.sleep(50)
 
         try:
             browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div/div[1]").click()
