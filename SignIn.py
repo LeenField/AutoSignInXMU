@@ -22,11 +22,11 @@ def xmu():
         browser.find_element_by_xpath(
             "//*[@id='password']").send_keys("os.environ['XMU_PASSWORD']")
         browser.find_element_by_xpath("//*[@type='submit']").click()
-        time.sleep(2)
+        time.sleep(10)
 
         try:
             browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div/div[1]").click()
-            time.sleep(2)
+            time.sleep(10)
 
             try:
                 now_handle = browser.current_window_handle   #获取当前窗口的句柄
@@ -37,7 +37,7 @@ def xmu():
                     if now_handle != handles:
                         browser.switch_to_window(handles)
                 browser.find_element_by_xpath("//*[@title='我的表单']").click()
-                time.sleep(2)
+                time.sleep(10)
                 try:
                     # js="window.scrollTo(0,document.body.scrollHeight)"
                     # browser.execute_script(js)
@@ -46,25 +46,25 @@ def xmu():
                         print("成功到达表单")
                     # browser.find_element_by_xpath("//*[@class='form-control dropdown-toggle'][12]").click()
                     # browser.find_element_by_xpath("//*[@class='btn-content placeholder'][3]").click()
-                    time.sleep(2)
+                    time.sleep(10)
 
                     try:
                         # 用edge的debug模式居然不显示Xpath，chrome的有，浪费一堆时间。。。
                         # 点击 "本人是否承诺所填报的全部内容均属实"
                         browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[2]/div[1]/div/div/div[3]/div/div[22]/div/div/div").click()
-                        time.sleep(2)
+                        time.sleep(10)
                         # browser.find_element_by_xpath("//*[@title='请选择'][3]").click()
                         # browser.find_element_by_xpath("//div[@class='form-control dropdown-toggle'][4]").click()
                         # browser.find_element_by_xpath("//*[@title='是 Yes']").click()
                         # 点击"是 Yes"
                         browser.find_element_by_xpath("/html/body/div[8]/ul/div/div[3]/li/label").click()
-                        time.sleep(2)
+                        time.sleep(10)
 
                         try:
                             # 点击保存按钮
                             # browser.find_element_by_xpath("//*[@class='form-save']").click()
                             browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[2]/div[1]/div/div/span/span").click()
-                            time.sleep(2)
+                            time.sleep(10)
 
                             try:                        
                                 confirm_alert = browser.switch_to.alert
