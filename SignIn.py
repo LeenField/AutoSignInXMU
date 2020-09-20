@@ -16,18 +16,18 @@ browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_option
 
 def xmu():
     browser.get("https://ids.xmu.edu.cn/authserver/login?service=https://xmuxg.xmu.edu.cn/login/cas/xmu")
-    #browser.maximize_window()
+    browser.maximize_window()
     
     try:
         browser.find_element_by_xpath(
-            "//*[@id='username']").send_keys("os.environ['XMU_USER']")
+            "//*[@id='username']").send_keys(os.environ['XMU_USER'])
         browser.find_element_by_xpath(
-            "//*[@id='password']").send_keys("os.environ['XMU_PASSWORD']")
+            "//*[@id='password']").send_keys(os.environ['XMU_PASSWORD'])
         browser.find_element_by_xpath("//*[@type='submit']").click()
-        time.sleep(50)
+        time.sleep(10)
 
         try:
-            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div/div[1]").click()
+            browser.find_element_by_xpath("//*[@class='app_child box_flex'][1]").click()
             time.sleep(10)
 
             try:
