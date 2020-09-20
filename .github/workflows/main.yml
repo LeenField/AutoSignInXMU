@@ -36,6 +36,6 @@ jobs:
           run: echo "::set-env name=REPORT_DATE::$(TZ=':Asia/Shenzhen' date '+%Y-%m-%d %T')"
         - name: 'AutoSignIn'
           env:
-            SCUT_USER: ${{ secrets.XMU_USER }}
-            SCUT_PASSWORD: ${{ secrets.XMU_PASSWORD }}
+            XMU_USER: ${{ secrets.XMU_USER }}
+            XMU_PASSWORD: ${{ secrets.XMU_PASSWORD }}
           run: python SignIn.py
