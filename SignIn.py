@@ -7,9 +7,11 @@ from selenium.common.exceptions import NoSuchElementException, NoAlertPresentExc
 
 # 模拟浏览器打开网站
 chrome_options = Options()
-# chrome_options.add_argument('--headless')
-# chrome_options.add_argument('--no-sandbox')
-# chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('--no-sandbox')#　让Chrome在root权限下跑
+chrome_options.add_argument('--disable-dev-shm-usage')
+chrome_options.add_argument('blink-settings=imagesEnabled=false')
+chrome_options.add_argument('--headless')
+chrome_options.add_argument('--disable-gpu')
 browser = webdriver.Chrome('/usr/bin/chromedriver', chrome_options=chrome_options)
 
 def xmu():
