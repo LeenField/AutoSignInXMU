@@ -38,13 +38,13 @@ def xmu():
                 for handles in all_handles:
                     if now_handle != handles:
                         browser.switch_to_window(handles)
-                browser.find_element_by_xpath("//*[@title='我的表单']").click()
+                browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[1]/div[2]/div/div[3]/div[2]']").click()
                 time.sleep(10)
                 try:
                     # js="window.scrollTo(0,document.body.scrollHeight)"
                     # browser.execute_script(js)
                     # browser.find_element_by_xpath("//*[@class='form-save']").click()
-                    if("日志" in browser.find_element_by_xpath("//*[@title='操作日志']").text):
+                    if("日志" in browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[2]/div[1]/div/div/button").text):
                         print("成功到达表单")
                     # browser.find_element_by_xpath("//*[@class='form-control dropdown-toggle'][12]").click()
                     # browser.find_element_by_xpath("//*[@class='btn-content placeholder'][3]").click()
