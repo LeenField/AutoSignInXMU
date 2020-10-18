@@ -38,7 +38,7 @@ def xmu():
                 for handles in all_handles:
                     if now_handle != handles:
                         browser.switch_to_window(handles)
-                browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[1]/div[2]/div/div[3]/div[2]']").click()
+                browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[1]/div[2]/div/div[3]/div[2]").click()
                 time.sleep(10)
                 try:
                     # js="window.scrollTo(0,document.body.scrollHeight)"
