@@ -35,6 +35,7 @@ jobs:
         - name: 'Get Date'
           env:
             REPORT_DATE: ${{ TZ=':Asia/Shenzhen' date '+%Y-%m-%d %T' }}
+            run: echo "Date is ${REPORT_DATE}"
         - name: 'AutoSignIn'
           env:
             XMU_USER: ${{ secrets.XMU_USER }}
