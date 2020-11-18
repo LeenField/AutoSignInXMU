@@ -5,12 +5,19 @@ on:
     types: started
   push:
   schedule:
-    - cron: '5 23 * * *'
+    - cron: '05 23 * * *'
 
 jobs:
   bot:
     runs-on: ubuntu-latest
     steps:
+        - name: Random wait
+           # You may pin to the exact commit or the version.
+           # uses: m3y/random-wait-action@62e419c7545f204297b3d0f6d6b376e2256e2dfd
+          uses: m3y/random-wait-action@v1
+          with:
+          # Maximum wait time
+            max-wait-time: 1800 # optional, default is 10
         - name: 'Checkout codes'
           uses: actions/checkout@v1
         - name: 'Set up Python'
