@@ -27,7 +27,7 @@ def xmu():
         time.sleep(10)
 
         try:
-            browser.find_element_by_xpath("//*[@class='app_child box_flex'][1]").click()
+            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div[1]").click()
             time.sleep(10)
 
             try:
