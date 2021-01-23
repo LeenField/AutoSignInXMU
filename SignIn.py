@@ -54,7 +54,7 @@ def xmu():
                     try:
                         # 用edge的debug模式居然不显示Xpath，chrome的有，浪费一堆时间。。。
                         # 点击 "本人是否承诺所填报的全部内容均属实"
-                        browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[2]/div[1]/div/div/div[3]/div/div[25]/div/div/div").click()
+                        browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[2]/div[1]/div/div/div[3]/div/div[30]/div/div/div").click()
                         time.sleep(10)
                         # browser.find_element_by_xpath("//*[@title='请选择'][3]").click()
                         # browser.find_element_by_xpath("//div[@class='form-control dropdown-toggle'][4]").click()
