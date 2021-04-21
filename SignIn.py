@@ -28,7 +28,7 @@ def xmu():
 
         try:
             ''' 点击 Daily Health Report 健康防疫管理 '''
-            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div[1]").click()
+            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div[1]/div[2]").click()
             time.sleep(10)
 
             try:
@@ -39,6 +39,7 @@ def xmu():
                 for handles in all_handles:
                     if now_handle != handles:
                         browser.switch_to_window(handles)
+                print(browser.title)  #获取切换后的标题
                 browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div/div[1]/div[2]/div/div[3]/div[2]").click()
                 time.sleep(10)
                 try:
