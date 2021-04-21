@@ -27,8 +27,8 @@ def xmu():
         time.sleep(10)
 
         try:
-            ''' 点击 Daily Health Report 健康打卡 防疫管理 '''
-            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[3]/div[2]/div[2]/div[3]/div/div[1]").click()
+            ''' 点击 Daily Health Report 健康防疫管理 '''
+            browser.find_element_by_xpath("/html/body/div[1]/div/div/div/div[2]/div/div[1]/div[2]/div[2]/div/div[1]").click()
             time.sleep(10)
 
             try:
